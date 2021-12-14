@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/home.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <!-- heading -->
+        <h1 class="heading">To Do App</h1>
+
+        <!-- form div -->
+        <div class="form">
+            <form action="/create-todo" method="post">
+
+                <!-- description -->
+                <div class="des-input">
+                    <label for="description">DESCRIPTION</label>
+                    <input type="text" name="description" placeholder="what do you need to do ?" required>
+                </div>
+                
+                <!-- choose category label -->
+                <div class="cat-date-input">
+                    <div class="first">
+                        <label for="category">CATEGORY  </label>
+                        <select name="category" id="category" required>
+                            <option value=""></option>
+                            <option value="work">Work</option>
+                            <option value="home">Home</option>
+                            <option value="personal">personal</option>
+                            <option value="college">College</option>
+                        </select>
+                    </div>
+
+                    <!-- date category -->
+                    <div class="sec">
+                        <label for="birthday">DUE DATE  </label>
+                        <input type="date" id="birthday" name="date" required>
+                    </div>
+                </div> 
+
+                <!-- add button div -->
+                <div class="btn-class">
+                    <button type="submit">ADD TASK</button>
+                    <!-- <a href="/delete-all"><button>DELETE TASKS</button></a> -->
+                </div>
+            </form>
+
+            <div class="btn-class">
+                    <!-- <button type="submit">ADD TASK</button> -->
+                    <a href="/delete-all"><button>DELETE TASKS</button></a>
+                </div>
+
+        </div>
+
+        <div class="list-container">
+            <ul class="list">
+                <% for(let i of todoList){ %>
+                    <li class="item">
+                        <!-- logo of check -->
+                        <div class="check-logo">
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div class="Detail-todo">
+                            <p class="todo-descrpt"><%= i.description %></p>
+                            <p><i class="far fa-calendar"></i><span id="date"><%= i.date %></span></p>
+                        </div>
+                        
+                        <div class="cat-del">
+                            <p><%= i.category %></p>
+                            <a href='/delete-todo/?id=<%= i._id %>'>
+                                <!-- <button claass="del-btn"> -->
+                                <i class="far fa-trash-alt"></i>
+                            <!-- </button> -->
+                            </a>
+                        </div>
+                        
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="./js/home.js"></script>
+</body>
+</html>

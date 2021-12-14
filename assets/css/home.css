@@ -1,0 +1,212 @@
+
+/* ---body--- */
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: linear-gradient(to bottom right, #0000cc 0%, #00cc99 83%);
+}
+
+/* ---container--- */
+.container{
+    width: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    background-color: white;
+}
+
+/* ---form--- */
+.form{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+.heading{
+    font-size: 2rem;
+    color: grey;
+}
+
+.form .des-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.des-input input{
+    font-size: 0.8rem;
+    padding: 5px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+.des-input label{
+    font-size: 0.8rem;
+    /* font-weight: 700; */
+    /* color: gray; */
+}
+
+/* ---category part--- */
+.cat-date-input{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.first label{
+    font-size: 0.8rem;
+}
+
+.first select{
+    width: 200px;
+    padding: 5px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+.sec label{
+    font-size: 0.8rem;
+}
+
+.sec input{
+    width: 200px;
+    padding: 4px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+.btn-class{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-class button{
+    width: 170px;
+    height: 40px;
+    background-color: rgb(87, 89, 187);
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    border: none;
+}
+
+.btn-class a button{
+    background-color: rgb(139, 20, 20);
+}
+
+/* ---todo list--- */
+.list-container{
+    width: 90%;
+    margin-top: 2.5rem;
+    /* border: 1px solid black; */
+}
+
+.list{
+    list-style: none;
+    /* border: 1px solid black; */
+    margin-top: 0;
+    /* display: flex; */
+}
+
+.list .item{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border: none;
+    border-bottom: 2px solid rgba(241, 20, 94, 0.788);
+    width: 106%;
+    margin-left: -42px;
+    margin-top: 3px;
+    /* margin-top: 1px; */
+}
+
+.check-logo{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Detail-todo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    width: 69%;
+}
+
+.item .Detail-todo .todo-descrpt{
+    font-size: 1rem;
+    font-family: sans-serif;
+    /* text-decoration: line-through; */
+    text-transform: capitalize;
+}
+
+.lineThrough{
+    /* text-decoration: line-through; */
+    opacity: 0.3;
+}
+
+.Detail-todo p{
+    padding: 0;
+    /* border: 1px solid black; */
+    margin-top: 1px;
+}
+
+.Detail-todo p i{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#date{
+    font-size: 0.7rem;
+}
+
+.cat-del{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.cat-del a{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(236, 45, 71, 0.877); */
+    padding: 15px;
+}
+
+.cat-del p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    background-color: green;
+}
+
+.cat-del i{
+    font-size: 20px;
+    color: red;
+}
+
+
+
